@@ -1,0 +1,4 @@
+name: SkillPack
+main: com.waynepn.skillpack
+version: ${version}
+depend:[SkillAPI]

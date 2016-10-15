@@ -1,0 +1,4 @@
+name: SkillPack
+main: com.waynepn.skillpack
+version: 0.0.1-SNAPSHOT
+depend:[SkillAPI]
