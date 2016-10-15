@@ -1,4 +1,5 @@
 name: SkillPack
-main: com.waynepn.skillpack
-version: ${version}
-depend:[SkillAPI]
+main: com.waynepn.skillpack.SkillPack
+version: 0.0.1-SNAPSHOT
+author: WaynePN
+depend: [SkillAPI]

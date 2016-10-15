@@ -17,6 +17,9 @@ public class Earthquake extends Skill implements SkillShot {
 	public static String NAME = "Earthquake";
 	public static Double DAMAGE_BASE = 10.0;
 	public static Double DAMAGE_SCALE = 2.0;
+	public static Double RANGE_BASE = 5.0;
+	public static Double RANGE_SCALE = 1.0;
+	
 	private static Logger log = Logger.getLogger(Earthquake.class.toString());
 
 	public Earthquake() {
@@ -25,22 +28,21 @@ public class Earthquake extends Skill implements SkillShot {
 		this.settings.set(SkillAttribute.LEVEL , 1, 0);
 		this.settings.set(SkillAttribute.COOLDOWN , 1, 0);
 		this.settings.set(SkillAttribute.MANA , 0, 0);
-		this.settings.set(SkillAttribute.RANGE, 5, 1);
+		this.settings.set(SkillAttribute.RANGE, RANGE_BASE, RANGE_SCALE);
 	
 	}
 
 	@Override
 	public boolean cast(LivingEntity user, int level) {
-		List<Entity> entities = user.getNearbyEntities(5.0, 5.0, 5.0);
+		Double range = RANGE_BASE + RANGE_SCALE*level;
+		List<Entity> entities = user.getNearbyEntities(range, range, range);
 		for(Entity e : entities){
-			log.info(e.getCustomName());
+			log.info("Nearby entity: "+e.getName());
 			if(e instanceof Monster){
 				e = (Monster)e;
+				((Monster) e).damage(Earthquake.DAMAGE_BASE + Earthquake.DAMAGE_SCALE*level, user);
 			}
-		}
-		
-		
-		
+		}		
 		return true;
 	}
 

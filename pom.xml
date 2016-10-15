@@ -6,6 +6,13 @@
   <name>SkillPack</name>
   <description>A pack includes lots of skills and classes for SkillAPI.</description>
   <dependencies>
+  	<dependency>
+      <groupId>org.bukkit</groupId>
+      <artifactId>craftbukkit</artifactId>
+      <version>1.8.3-R0.1</version>
+      <type>jar</type>
+      <scope>compile</scope>
+    </dependency>
     <dependency>
       <groupId>org.bukkit</groupId>
       <artifactId>bukkit</artifactId>
@@ -16,7 +23,7 @@
     <dependency>
       <groupId>com.sucy</groupId>
       <artifactId>skill</artifactId>
-      <version>3.37</version>
+      <version>3.95</version>
       <type>jar</type>
       <scope>compile</scope>
     </dependency>
