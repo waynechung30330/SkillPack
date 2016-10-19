@@ -3,6 +3,7 @@ package com.waynepn.skillpack;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.sucy.skill.SkillAPI;
 import com.sucy.skill.api.SkillPlugin;
+import com.waynepn.skillpack.classes.*;
 import com.waynepn.skillpack.skills.*;
 
 public class SkillPack extends JavaPlugin implements SkillPlugin {
@@ -11,14 +12,16 @@ public class SkillPack extends JavaPlugin implements SkillPlugin {
     }
     @Override
     public void registerSkills(SkillAPI skillAPI) {
-        skillAPI.addSkills(new Earthquake(), new ArrowTNT());
+        skillAPI.addSkills(new Earthquake(), new ArrowTNT(), new Thunder());
     }
     /* 
      * There is some error adding class(non-Javadoc)
      * @see com.sucy.skill.api.SkillPlugin#registerClasses(com.sucy.skill.SkillAPI)
      */
      @Override
-     public void registerClasses(SkillAPI skillAPI) {   }
+     public void registerClasses(SkillAPI skillAPI) { 
+    	 skillAPI.addClass(new SkillPackAdmin());
+     }
      
 	
 }
