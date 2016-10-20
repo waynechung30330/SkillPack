@@ -29,7 +29,7 @@ public class SkillPackAdmin extends RPGClass {
             lore.add(ChatColor.GRAY + "uses potions to apply AOE");
             lore.add(ChatColor.GRAY + "debilitation and healing.");
             
-            meta.setDisplayName(ChatColor.GOLD + "Admin");
+            meta.setDisplayName(ChatColor.GOLD + "SkillPackAdmin");
             meta.setLore(lore);
             setItemMeta(meta);
         }}, 40);
@@ -38,7 +38,7 @@ public class SkillPackAdmin extends RPGClass {
         settings.set(ClassAttribute.MANA, 100, 0);
 
         setPrefix(ChatColor.GOLD + "SkillPackAdmin");
-        setManaName("Power");
+        setManaName("%9Power");
         setManaRegen(100);
         setAllowedExpSources(ExpSource.MOB, ExpSource.QUEST, ExpSource.COMMAND);
 

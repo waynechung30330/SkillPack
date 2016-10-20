@@ -23,7 +23,7 @@ public class Thunder extends Skill implements TargetSkill {
 	
 	
 	public Thunder() {
-		super(NAME, "",  Material.NETHER_STAR , Thunder.MAX_LEVEL);
+		super(NAME, "target",  Material.NETHER_STAR , Thunder.MAX_LEVEL);
 		
 		this.settings.set(SkillAttribute.COOLDOWN, Thunder.COOLDOWN);
 		this.settings.set(SkillAttribute.COST , Thunder.COST_BASE, Thunder.COST_SCALE);

@@ -47,6 +47,7 @@ public class ArrowTNT extends Skill implements SkillShot, Listener {
 		return true;		
 	}
 	
+	// The arrow touch a block/entity spawn a TNT and explosion immediately. 
 	@EventHandler(priority = EventPriority.HIGHEST) 
     public void onProjectileHit(ProjectileHitEvent event) {		
         Entity e = event.getEntity();
@@ -59,6 +60,7 @@ public class ArrowTNT extends Skill implements SkillShot, Listener {
         e.remove();
     }
 	
+	// Set explosion range.
 	@EventHandler(priority = EventPriority.HIGHEST) 
     public void onExplosionPrime(ExplosionPrimeEvent event) {	
 		if(event.getEntity() instanceof TNTPrimed && event.getEntity().hasMetadata(NAME)){
@@ -68,6 +70,7 @@ public class ArrowTNT extends Skill implements SkillShot, Listener {
 		}
     }
 	
+	// Not destory blocks.
 	@EventHandler(priority = EventPriority.HIGHEST) 
     public void onEntityExplode(EntityExplodeEvent event) {				
 		if(event.getEntity() instanceof TNTPrimed && event.getEntity().hasMetadata(NAME)){
@@ -75,6 +78,7 @@ public class ArrowTNT extends Skill implements SkillShot, Listener {
 		}
     }
 	
+	// Disable TNT damage to player
 	@EventHandler(priority = EventPriority.HIGHEST) 
     public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {	
 		if(event.getDamager() instanceof TNTPrimed && event.getDamager().hasMetadata(NAME)){
