@@ -1,6 +1,7 @@
-com/waynepn/skillpack/classes/SkillPackAdmin$1.class
-com/waynepn/skillpack/SkillPack.class
-com/waynepn/skillpack/skills/ArrowTNT.class
-com/waynepn/skillpack/skills/Thunder.class
-com/waynepn/skillpack/classes/SkillPackAdmin.class
-com/waynepn/skillpack/skills/Earthquake.class
+com\waynepn\skillpack\skills\Earthquake.class
+com\waynepn\skillpack\classes\SkillPackAdmin$1.class
+com\waynepn\skillpack\skills\Thunder.class
+com\waynepn\skillpack\classes\SkillPackAdmin.class
+com\waynepn\skillpack\skills\TargetSkill.class
+com\waynepn\skillpack\SkillPack.class
+com\waynepn\skillpack\skills\ArrowTNT.class

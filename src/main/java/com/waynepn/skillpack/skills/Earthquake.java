@@ -37,7 +37,7 @@ public class Earthquake extends Skill implements SkillShot {
 		Double range = RANGE_BASE + RANGE_SCALE*level;
 		List<Entity> entities = user.getNearbyEntities(range, range, range);
 		for(Entity e : entities){
-			log.info("Nearby entity: "+e.getName());
+			//log.info("Nearby entity: "+e.getName());
 			if(e instanceof Monster){
 				e = (Monster)e;
 				((Monster) e).damage(Earthquake.DAMAGE_BASE + Earthquake.DAMAGE_SCALE*level, user);
